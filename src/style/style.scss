@@ -1,0 +1,114 @@
+html.light {
+  --color-text: #000;
+  --color-bg: #a6a6a6;
+  --color-btn-orange: #a6a6a6;
+  --color-btn-gray: #a6a6a6;
+  --color-btn: #a6a6a6;
+  --color-btn-ac: #a6a6a6;
+}
+
+html.color {
+  --color-text: #fff;
+  --color-bg: #000;
+  --color-btn-orange: #ff9501;
+  --color-btn-gray: #a6a6a6;
+  --color-btn: #333;
+  --color-btn-ac: darkred;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.calc {
+  margin: 50px auto;
+  width: 400px;
+  height: 570px;
+  /*border: 1px solid #000;*/
+  border-radius: 20px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial;
+  padding: 18px;
+  box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.calc-screen {
+  height: 125px;
+  padding: 10px;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.calc-screen p {
+  text-align: right;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-areas:
+          "ac mc mr m-plus m-minus division"
+          "x2 x3 ac2 plus-minus percent multiply"
+          "2r 3r seven eigth nine minus"
+          "xy 10x four five six plus"
+          "xyr one-devide-x one two three equal"
+          "factorial func zero zero dot equal";
+  grid-gap: 7px;
+  justify-items: center;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-btn);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn.zero {
+  grid-area: zero;
+  width: 100%;
+  border-radius: 34px;
+}
+
+.btn.equal {
+  grid-area: equal;
+  height: 100%;
+  border-radius: 34px;
+}
+
+.btn:hover {
+  filter: brightness(120%);
+}
+.btn:active {
+  filter: brightness(90%);
+}
+
+.btn.bg-gray {
+  background-color: var(--color-btn-gray);
+
+}.btn.bg-red {
+   background-color: var(--color-btn-ac);
+ }
+
+.btn.bg-orange {
+  background-color: var(--color-btn-orange);
+}
